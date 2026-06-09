@@ -3,7 +3,7 @@ import { API_BASE_URL, TOKEN_KEY } from '../constants/config';
 
 // Create the axios instance
 const axiosInstance = axios.create({
-  baseURL: API_BASE_URL,
+   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json',
   },
